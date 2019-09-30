@@ -5,8 +5,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.dark(),
-        home: LoginPage(),
+        theme: ThemeData(
+          primaryColor: Colors.indigo[800],
+          accentColor: Colors.pinkAccent[400]
+        ),
+        home: Scaffold(
+          body: LoginPage(),
+        )
       );
   }
 }

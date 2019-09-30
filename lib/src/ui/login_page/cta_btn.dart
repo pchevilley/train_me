@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CallToActionButton extends StatelessWidget {
-  Color color;
-  String label;
-  IconData iconData;
-  Function onTap;
+  final Color color;
+  final String label;
+  final IconData iconData;
+  final Function onTap;
 
   CallToActionButton(this.color, this.label, this.iconData, this.onTap);
 
@@ -17,11 +17,18 @@ class CallToActionButton extends StatelessWidget {
         children: [
           SizedBox(
             width: 40,
-            child: Icon(iconData),
+            child: Icon(iconData, color: Colors.white,),
           ),
           Expanded(
-            child:  Center(
-              child: Text(label, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400))
+            child: Center(
+              child: Text(
+                label, 
+                style: TextStyle(
+                  fontSize: 20, 
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white
+                )
+              )
             ),
           )
         ]
