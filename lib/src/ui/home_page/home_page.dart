@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:train_me/src/blocs/user_bloc.dart';
+import 'package:train_me/src/ui/sports_list/sports_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -40,7 +41,8 @@ class HomePageState extends State<HomePage> {
               child: Column(
                 children: <Widget>[
                   CircleAvatar(backgroundImage: NetworkImage(snapshot.data.profileMedium)),
-                  Text(snapshot.data.firstname + ' ' + snapshot.data.lastname)
+                  Text(snapshot.data.firstname + ' ' + snapshot.data.lastname),
+                  SportsList()
                 ],
               )
             );

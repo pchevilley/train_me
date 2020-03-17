@@ -5,15 +5,15 @@ import 'package:strava_flutter/strava.dart';
 import 'package:train_me/src/resources/strava_secret.dart';
 
 class StravaAPIProvider {
-  final strava = Strava(true, strava_secret);
+  final strava = Strava(true, STRAVA_SECRET);
   final prompt = 'auto';
   bool isAuth = false;
 
   Future<bool> auth() async {
     isAuth = await strava.oauth(
-      strava_clientID, 
+      STRAVA_CLIENT_ID, 
       'activity:write,activity:read_all,profile:read_all,profile:write', 
-      strava_secret, 
+      STRAVA_SECRET, 
       prompt
     );
 
